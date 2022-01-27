@@ -1,0 +1,108 @@
+
+Data on tumor recurrence for patients with bladder cancer.
+
+
+Source: Table 2 (page 1067) of Wei, Lin and Weissfeld (1989). 
+Reproduced with permission of the American Statistical Association.
+
+Reference: Wei, L.J., Lin, D.Y. and Weissfeld, L. (1989). 
+Regression analysis of multivariate incomplete failure time data by modeling 
+marginal distribution. Journal of the American Statistical Association, 
+84, 1065-1071.
+
+
+Description:
+
+The data are from an experimental study of patients with bladder
+cancer conducted by the Veterans Administration Cooperative Urological 
+Research Group. In this study patients underwent surgery to remove
+tumors. Following surgery, patients were randomized to either
+placebo or treatment with thiotepa. Subsequently patients were
+examined at 18, 24, 30 and 36 months. The dataset contains information
+for the month 18 follow-up visit only. The response variable is binary, 
+indicating whether or not there is a new tumor (Y=1, if new tumor; 
+Y=0, if no new tumor) at the 18 month visit. The categorical variable 
+Treatment is coded 1=thiotepa, 0=placebo.
+
+
+Variable List:
+
+Subject ID, Treatment (0=Placebo, 1=Thiotepa), 
+Tumor Recurrence (1=New tumors, O=No New Tumors).
+
+
+                     1        0          1  
+                     2        0          1  
+                     3        0          1  
+                     4        0          0  
+                     5        0          1  
+                     6        0          1  
+                     7        0          0  
+                     8        0          0  
+                     9        0          1  
+                    10        0          0  
+                    11        0          0  
+                    12        0          0  
+                    13        0          0  
+                    14        0          0  
+                    15        0          1  
+                    16        0          1  
+                    17        0          0  
+                    18        0          0  
+                    19        0          0  
+                    20        0          0  
+                    21        0          0  
+                    22        0          1  
+                    23        0          0  
+                    24        0          1  
+                    25        0          0  
+                    26        0          0  
+                    27        0          0  
+                    28        0          0  
+                    29        0          0  
+                    30        0          0  
+                    31        0          0  
+                    32        0          0  
+                    33        0          1  
+                    34        0          1  
+                    35        0          0  
+                    36        0          1  
+                    37        0          0  
+                    38        0          0  
+                    39        0          1  
+                    40        0          0  
+                    41        0          0  
+                    42        0          0  
+                    48        1          0  
+                    49        1          0  
+                    50        1          0  
+                    51        1          0  
+                    52        1          0  
+                    53        1          0  
+                    54        1          0  
+                    55        1          0  
+                    56        1          0  
+                    57        1          0  
+                    58        1          0  
+                    59        1          0  
+                    60        1          0  
+                    61        1          0  
+                    62        1          0  
+                    63        1          1  
+                    64        1          0  
+                    65        1          0  
+                    66        1          0  
+                    67        1          0  
+                    68        1          0  
+                    69        1          1  
+                    70        1          0  
+                    71        1          0  
+                    72        1          0  
+                    73        1          0  
+                    74        1          1  
+                    75        1          0  
+                    76        1          1  
+                    77        1          0  
+                    78        1          0  
+                    79        1          0  
+                    80        1          0  

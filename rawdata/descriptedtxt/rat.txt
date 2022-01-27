@@ -1,0 +1,54 @@
+
+Data on weight gain in rats exposed to thiouracil and thyroxin.
+
+Source: Table D (page 389) in Box (1950). 
+With permission of Blackwell Publishing.
+
+Reference: Box, G.E.P. (1950). Problems in the analysis of 
+growth and wear curves.  Biometrics, 6, 362-389.
+
+
+Description:
+
+The data are from a study of weight gain, where investigators randomly assigned
+30 rats to three treatment groups: treatment 1 was a control (no additive); 
+treatments 2 and 3 consisted of two different additives (thiouracil and thyroxin
+respectively) to the rats drinking water. Weight was measured at
+baseline (week 0) and at weeks 1, 2, 3, and 4.
+Note: Due to an accident at the beginning of the study, data on 3 rats from the
+thyroxin group are unavailable.
+
+Variable List:
+
+ID, Treatment (1=Control, 2=Thiouracil, 3=Thyroxin), 
+Baseline Weight (Week 0), Weight at Week 1, Weight at Week 2, 
+Weight at Week 3, Weight at Week 4. 
+
+
+          1      1     57    86    114    139    172
+          2      1     60    93    123    146    177
+          3      1     52    77    111    144    185
+          4      1     49    67    100    129    164
+          5      1     56    81    104    121    151
+          6      1     46    70    102    131    153
+          7      1     51    71     94    110    141
+          8      1     63    91    112    130    154
+          9      1     49    67     90    112    140
+         10      1     57    82    110    139    169
+         11      2     61    86    109    120    129
+         12      2     59    80    101    111    122
+         13      2     53    79    100    106    133
+         14      2     59    88    100    111    122
+         15      2     51    75    101    123    140
+         16      2     51    75     92    100    119
+         17      2     56    78     95    103    108
+         18      2     58    69     93    114    138
+         19      2     46    61     78     90    107
+         20      2     53    72     89    104    122
+         21      3     59    85    121    146    181
+         22      3     54    71     90    110    138
+         23      3     56    75    108    151    189
+         24      3     59    85    116    148    177
+         25      3     57    72     97    120    144
+         26      3     52    73     97    116    140
+         27      3     52    70    105    138    171

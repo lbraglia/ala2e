@@ -1,0 +1,140 @@
+
+Data from a clinical trial comparing two treatments for a respiratory illness.
+
+
+Source: Chapter 15 (Respiratory Data) of Stokes, Davis and Koch (1995). 
+Reproduced with permission of SAS Institute, Inc., Cary, NC.
+
+Reference: Stokes, M.E., Davis, C.S. and Koch, G.G. (1995). 
+Categorical Data Analysis using the SAS System. Cary, NC: SAS Institute, Inc.
+
+
+Description:
+
+The data are from a clinical trial of patients with respiratory
+illness, where 111 patients from two different clinics were randomized
+to receive either placebo or an active treatment. Patients were
+examined at baseline and at four visits during treatment. At each
+examination, respiratory status (categorized as 1 = good, 0 = poor) 
+was determined. 
+
+
+Variable List:
+
+ID, Clinic (1,2), ID, Treatment (A=Active, P=Placebo), Baseline Response, Visit 1 Response, 
+Visit 2 Response, Visit 3 Response, Visit 4 Response.
+
+Note: Response (1=Good Response, 0=Poor Response)
+
+1    1        P        0    0    0    0    0
+2    1        P        0    0    0    0    0
+3    1        A        1    1    1    1    1
+4    1        P        1    1    1    1    0
+5    1        P        1    1    1    1    1
+6    1        A        0    0    0    0    0
+7    1        P        0    1    0    1    1
+8    1        A        0    0    0    0    0
+9    1        A        1    1    1    1    1
+10    1        P        1    0    1    1    0
+11    1        A        1    1    1    1    1
+12    1        A        0    1    1    1    0
+13    1        P        1    1    0    0    0
+14    1        P        0    0    0    0    0
+15    1        P        1    1    1    1    1
+16    1        A        0    0    0    0    1
+17    1        P        0    0    0    0    0
+18    1        A        0    0    1    1    1
+19    1        P        0    0    0    0    0
+20    1        A        1    1    0    1    0
+21    1        A        0    1    0    1    0
+22    1        A        1    1    1    1    1
+23    1        A        1    1    1    1    1
+24    1        A        0    1    0    0    0
+25    1        P        0    0    0    0    0
+26    1        A        0    0    0    0    0
+27    1        P        1    1    0    1    1
+28    1        P        0    1    1    0    0
+29    1        P        0    1    1    0    0
+30    1        A        0    0    0    0    0
+31    1        P        0    0    0    0    0
+32    1        A        0    1    1    1    1
+33    1        A        1    1    1    1    0
+34    1        P        0    0    1    1    0
+35    1        A        0    0    0    1    0
+36    1        P        0    0    0    0    0
+37    1        A        0    0    1    0    0
+38    1        A        0    0    0    0    0
+39    1        P        0    0    0    0    0
+40    1        P        0    0    0    0    0
+41    1        P        0    0    0    0    1
+42    1        A        0    0    1    0    0
+43    1        P        1    1    1    1    1
+44    1        P        0    0    0    0    0
+45    1        P        0    1    0    1    1
+46    1        P        0    0    0    0    0
+47    1        P        0    0    0    0    0
+48    1        A        1    1    1    1    1
+49    1        P        1    1    1    1    1
+50    1        A        0    0    1    1    1
+51    1        A        0    0    1    1    1
+52    1        P        0    0    0    1    0
+53    1        A        0    0    0    1    0
+54    1        A        1    1    1    1    0
+55    1        P        1    1    1    1    1
+56    1        A        0    1    1    0    1
+57    2        P        0    0    0    0    0
+58    2        A        0    0    1    1    1
+59    2        A        1    1    1    1    1
+60    2        P        1    1    0    1    1
+61    2        P        1    0    0    1    1
+62    2        P        1    1    0    0    0
+63    2        P        1    1    1    1    1
+64    2        P        0    0    0    0    0
+65    2        A        0    1    1    1    1
+66    2        A        0    1    1    1    1
+67    2        P        0    0    0    0    0
+68    2        A        1    1    1    1    1
+69    2        P        0    1    1    1    1
+70    2        A        1    1    0    0    1
+71    2        A        1    1    1    1    1
+72    2        A        0    0    0    0    0
+73    2        P        0    1    0    0    0
+74    2        P        1    1    0    0    0
+75    2        A        1    1    1    1    1
+76    2        A        1    1    1    1    1
+77    2        P        1    1    0    0    1
+78    2        P        0    1    1    1    1
+79    2        A        1    1    1    1    1
+80    2        P        1    0    0    1    1
+81    2        A        1    1    1    1    0
+82    2        A        1    1    1    1    1
+83    2        A        1    1    0    1    1
+84    2        P        1    1    1    1    1
+85    2        A        1    1    1    1    1
+86    2        A        0    1    1    1    1
+87    2        P        0    1    1    1    1
+88    2        A        0    0    1    1    0
+89    2        P        1    0    0    1    1
+90    2        P        1    0    1    1    1
+91    2        P        1    0    0    0    0
+92    2        A        1    1    1    1    1
+93    2        A        0    0    0    0    0
+94    2        P        0    1    1    0    1
+95    2        P        1    1    1    1    1
+96    2        P        0    0    0    1    0
+97    2        P        1    1    1    1    1
+98    2        P        1    1    1    1    1
+99    2        A        0    1    1    0    1
+100    2        P        0    0    0    0    0
+101    2        P        1    1    1    0    1
+102    2        P        1    1    0    0    0
+103    2        A        0    1    1    1    1
+104    2        P        1    0    1    0    0
+105    2        A        0    1    0    0    0
+106    2        P        0    0    0    0    0
+107    2        A        1    1    1    1    0
+108    2        A        0    1    1    1    1
+109    2        A        0    1    1    1    1
+110    2        A        1    1    1    1    1
+111    2        A        1    1    1    1    1
+

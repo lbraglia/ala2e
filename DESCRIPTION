@@ -1,0 +1,20 @@
+Package: ala2e
+Title: Datasets from Fitzmaurice, Laird and Ware, "Applied Longitudinal
+    Analysis" (2nd Ed., 2011)
+Version: 0.1
+Authors@R: person("Luca", "Braglia", email = "lbraglia@gmail.com", role = c("aut", "cre"))
+Description: An unofficial companion to "Applied
+    Longitudinal Analysis" by G.M. Fitzmaurice, N. M. Laird and
+    J.H. Ware (2nd ed., 2011) containing the dataset used in the book.
+URL: https://github.com/lbraglia/ala2e
+BugReports: https://github.com/lbraglia/ala2e/issues
+Depends:
+    R (>= 3.5.0)
+License: GPL-3
+LazyData: true
+VignetteBuilder: knitr
+Suggests:
+    lme4,
+    geepack,
+Encoding: UTF-8
+RoxygenNote: 7.1.1

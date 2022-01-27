@@ -1,0 +1,795 @@
+> db_names <- c("lead",
++               "tlc",
++               "tlcmiss",
++               "smoking",
++               "fev1",
++               "headache",
++               "bpd",
++               "impairment",
++               "insomnia",
++               "tvsfp",
++               "ntp",
++               "melanoma",
++               "obesity", # only as .txt
++               "muscatine",
++               "epilepsy",
++               "seizure",
++               "ecg",
++               "amenorrhea",
++               "contracep",
++               "exercise",
++               "diabetes",
++               "dental",
++               "birthwt",
++               "chd",
++               "leprosy",
++               "cholesterol",
++               "rat",
++               "respir",
++               "tumor",
++               "cd4",
++               "toenail",
++               "progesterone",
++               "arthritis",
++               "schizophrenia",
++               "skin",
++               "fat",
++               "ccs")
+> 
+> exts <- c(".txt", '-data.txt', '.sas7bdat', '.dta')
+> 
+> downloader <- function(fprefix, ext){
++     outdir <- if (ext %in% '.txt') 'descriptedtxt'
++               else if (ext %in% '-data.txt') 'rawtxt'
++               else if (ext %in% '.sas7bdat') 'sas7bdat'
++               else if (ext %in% '.dta') 'dta'
++     fname <- paste0(fprefix, ext)
++     url <- paste0("http://content.sph.harvard.edu/fitzmaur/ala2e/",
++                   fname)
++     download.file(url = url, destfile = paste0(outdir, "/", fname))
++ }
+> 
+> for (f in db_names){
++     for (ext in exts){
++         tryCatch(
++             downloader(f, ext),
++             error = function(e) print(sprintf("%s%s NOT WORKING", f, ext)))
++     }
++ }
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/lead.txt'
+Content type 'text/plain' length 2930 bytes
+==================================================
+downloaded 2930 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/lead-data.txt'
+Content type 'text/plain' length 1949 bytes
+==================================================
+downloaded 1949 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/lead.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/lead.dta'
+Content type 'application/octet-stream' length 2111 bytes
+==================================================
+downloaded 2111 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlc.txt'
+Content type 'text/plain' length 6791 bytes
+==================================================
+downloaded 6791 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlc-data.txt'
+Content type 'text/plain' length 5799 bytes
+==================================================
+downloaded 5799 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlc.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlc.dta'
+Content type 'application/octet-stream' length 3791 bytes
+==================================================
+downloaded 3791 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlcmiss.txt'
+Content type 'text/plain' length 4644 bytes
+==================================================
+downloaded 4644 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlcmiss-data.txt'
+[1] "tlcmiss-data.txt NOT WORKING"
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlcmiss.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tlcmiss.dta'
+Content type 'application/octet-stream' length 3710 bytes
+==================================================
+downloaded 3710 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/smoking.txt'
+Content type 'text/plain' length 38095 bytes (37 KB)
+==================================================
+downloaded 37 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/smoking-data.txt'
+Content type 'text/plain' length 36236 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/smoking.sas7bdat'
+Content type 'application/octet-stream' length 29696 bytes (29 KB)
+==================================================
+downloaded 29 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/smoking.dta'
+Content type 'application/octet-stream' length 13248 bytes (12 KB)
+==================================================
+downloaded 12 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fev1.txt'
+Content type 'text/plain' length 124358 bytes (121 KB)
+==================================================
+downloaded 121 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fev1-data.txt'
+[1] "fev1-data.txt NOT WORKING"
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fev1.sas7bdat'
+Content type 'application/octet-stream' length 103424 bytes (101 KB)
+==================================================
+downloaded 101 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fev1.dta'
+Content type 'application/octet-stream' length 49166 bytes (48 KB)
+==================================================
+downloaded 48 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/headache.txt'
+Content type 'text/plain' length 29667 bytes (28 KB)
+==================================================
+downloaded 28 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/headache-data.txt'
+Content type 'text/plain' length 28340 bytes (27 KB)
+==================================================
+downloaded 27 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/headache.sas7bdat'
+Content type 'application/octet-stream' length 46080 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/headache.dta'
+Content type 'application/octet-stream' length 19076 bytes (18 KB)
+==================================================
+downloaded 18 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/bpd.txt'
+Content type 'text/plain' length 10051 bytes
+==================================================
+downloaded 10051 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/bpd-data.txt'
+Content type 'text/plain' length 9143 bytes
+==================================================
+downloaded 9143 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/bpd.sas7bdat'
+Content type 'application/octet-stream' length 13312 bytes (13 KB)
+==================================================
+downloaded 13 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/bpd.dta'
+Content type 'application/octet-stream' length 4480 bytes
+==================================================
+downloaded 4480 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/impairment.txt'
+Content type 'text/plain' length 1426 bytes
+==================================================
+downloaded 1426 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/impairment-data.txt'
+Content type 'text/plain' length 350 bytes
+==================================================
+downloaded 350 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/impairment.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/impairment.dta'
+Content type 'application/octet-stream' length 1552 bytes
+==================================================
+downloaded 1552 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/insomnia.txt'
+Content type 'text/plain' length 5642 bytes
+==================================================
+downloaded 5642 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/insomnia-data.txt'
+Content type 'text/plain' length 4563 bytes
+==================================================
+downloaded 4563 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/insomnia.sas7bdat'
+Content type 'application/octet-stream' length 21504 bytes (21 KB)
+==================================================
+downloaded 21 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/insomnia.dta'
+Content type 'application/octet-stream' length 8560 bytes
+==================================================
+downloaded 8560 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tvsfp.txt'
+Content type 'text/plain' length 83416 bytes (81 KB)
+==================================================
+downloaded 81 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tvsfp-data.txt'
+Content type 'text/plain' length 81599 bytes (79 KB)
+==================================================
+downloaded 79 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tvsfp.sas7bdat'
+Content type 'application/octet-stream' length 82944 bytes (81 KB)
+==================================================
+downloaded 81 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tvsfp.dta'
+Content type 'application/octet-stream' length 39710 bytes (38 KB)
+==================================================
+downloaded 38 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ntp.txt'
+Content type 'text/plain' length 41011 bytes (40 KB)
+==================================================
+downloaded 40 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ntp-data.txt'
+Content type 'text/plain' length 40091 bytes (39 KB)
+==================================================
+downloaded 39 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ntp.sas7bdat'
+Content type 'application/octet-stream' length 37888 bytes (37 KB)
+==================================================
+downloaded 37 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ntp.dta'
+Content type 'application/octet-stream' length 17360 bytes (16 KB)
+==================================================
+downloaded 16 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/melanoma.txt'
+Content type 'text/plain' length 5112 bytes
+==================================================
+downloaded 5112 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/melanoma-data.txt'
+Content type 'text/plain' length 3709 bytes
+==================================================
+downloaded 3709 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/melanoma.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/melanoma.dta'
+Content type 'application/octet-stream' length 2511 bytes
+==================================================
+downloaded 2511 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/obesity.txt'
+Content type 'text/plain' length 2641 bytes
+==================================================
+downloaded 2641 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/obesity-data.txt'
+Content type 'text/plain' length 1403 bytes
+==================================================
+downloaded 1403 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/obesity.sas7bdat'
+[1] "obesity.sas7bdat NOT WORKING"
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/obesity.dta'
+[1] "obesity.dta NOT WORKING"
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/muscatine.txt'
+Content type 'text/plain' length 236766 bytes (231 KB)
+==================================================
+downloaded 231 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/muscatine-data.txt'
+Content type 'text/plain' length 235603 bytes (230 KB)
+==================================================
+downloaded 230 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/muscatine.sas7bdat'
+Content type 'application/octet-stream' length 713728 bytes (697 KB)
+==================================================
+downloaded 697 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/muscatine.dta'
+Content type 'application/octet-stream' length 350942 bytes (342 KB)
+==================================================
+downloaded 342 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/epilepsy.txt'
+Content type 'text/plain' length 4835 bytes
+==================================================
+downloaded 4835 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/epilepsy-data.txt'
+Content type 'text/plain' length 3539 bytes
+==================================================
+downloaded 3539 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/epilepsy.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/epilepsy.dta'
+Content type 'application/octet-stream' length 3596 bytes
+==================================================
+downloaded 3596 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/seizure.txt'
+Content type 'text/plain' length 2247 bytes
+==================================================
+downloaded 2247 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/seizure-data.txt'
+Content type 'text/plain' length 945 bytes
+==================================================
+downloaded 945 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/seizure.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/seizure.dta'
+Content type 'application/octet-stream' length 1856 bytes
+==================================================
+downloaded 1856 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ecg.txt'
+Content type 'text/plain' length 7595 bytes
+==================================================
+downloaded 7595 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ecg-data.txt'
+Content type 'text/plain' length 6565 bytes
+==================================================
+downloaded 6565 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ecg.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ecg.dta'
+Content type 'application/octet-stream' length 3791 bytes
+==================================================
+downloaded 3791 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/amenorrhea.txt'
+Content type 'text/plain' length 116974 bytes (114 KB)
+==================================================
+downloaded 114 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/amenorrhea-data.txt'
+Content type 'text/plain' length 115100 bytes (112 KB)
+==================================================
+downloaded 112 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/amenorrhea.sas7bdat'
+Content type 'application/octet-stream' length 152576 bytes (149 KB)
+==================================================
+downloaded 149 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/amenorrhea.dta'
+Content type 'application/octet-stream' length 74576 bytes (72 KB)
+==================================================
+downloaded 72 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/contracep.txt'
+Content type 'text/plain' length 79575 bytes (77 KB)
+==================================================
+downloaded 77 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/contracep-data.txt'
+Content type 'text/plain' length 77398 bytes (75 KB)
+==================================================
+downloaded 75 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/contracep.sas7bdat'
+Content type 'application/octet-stream' length 201728 bytes (197 KB)
+==================================================
+downloaded 197 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/contracep.dta'
+Content type 'application/octet-stream' length 98582 bytes (96 KB)
+==================================================
+downloaded 96 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/exercise.txt'
+Content type 'text/plain' length 3200 bytes
+==================================================
+downloaded 3200 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/exercise-data.txt'
+Content type 'text/plain' length 2182 bytes
+==================================================
+downloaded 2182 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/exercise.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/exercise.dta'
+Content type 'application/octet-stream' length 3239 bytes
+==================================================
+downloaded 3239 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/diabetes.txt'
+Content type 'text/plain' length 1747 bytes
+==================================================
+downloaded 1747 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/diabetes-data.txt'
+Content type 'text/plain' length 903 bytes
+==================================================
+downloaded 903 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/diabetes.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/diabetes.dta'
+Content type 'application/octet-stream' length 858 bytes
+==================================================
+downloaded 858 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/dental.txt'
+Content type 'text/plain' length 2318 bytes
+==================================================
+downloaded 2318 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/dental-data.txt'
+Content type 'text/plain' length 1538 bytes
+==================================================
+downloaded 1538 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/dental.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/dental.dta'
+Content type 'application/octet-stream' length 1877 bytes
+==================================================
+downloaded 1877 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/birthwt.txt'
+Content type 'text/plain' length 129951 bytes (126 KB)
+==================================================
+downloaded 126 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/birthwt-data.txt'
+Content type 'text/plain' length 128432 bytes (125 KB)
+==================================================
+downloaded 125 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/birthwt.sas7bdat'
+Content type 'application/octet-stream' length 181248 bytes (177 KB)
+==================================================
+downloaded 177 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/birthwt.dta'
+Content type 'application/octet-stream' length 88911 bytes (86 KB)
+==================================================
+downloaded 86 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/chd.txt'
+Content type 'text/plain' length 1515 bytes
+==================================================
+downloaded 1515 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/chd-data.txt'
+Content type 'text/plain' length 719 bytes
+==================================================
+downloaded 719 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/chd.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/chd.dta'
+Content type 'application/octet-stream' length 1431 bytes
+==================================================
+downloaded 1431 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/leprosy.txt'
+Content type 'text/plain' length 1921 bytes
+==================================================
+downloaded 1921 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/leprosy-data.txt'
+Content type 'text/plain' length 479 bytes
+==================================================
+downloaded 479 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/leprosy.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/leprosy.dta'
+Content type 'application/octet-stream' length 1166 bytes
+==================================================
+downloaded 1166 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.txt'
+Content type 'text/plain' length 4868 bytes
+==================================================
+downloaded 4868 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol-data.txt'
+Content type 'text/plain' length 3342 bytes
+==================================================
+downloaded 3342 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cholesterol.dta'
+Content type 'application/octet-stream' length 4393 bytes
+==================================================
+downloaded 4393 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/rat.txt'
+Content type 'text/plain' length 2342 bytes
+==================================================
+downloaded 2342 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/rat-data.txt'
+Content type 'text/plain' length 1430 bytes
+==================================================
+downloaded 1430 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/rat.sas7bdat'
+Content type 'application/octet-stream' length 9216 bytes
+==================================================
+downloaded 9216 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/rat.dta'
+Content type 'application/octet-stream' length 2265 bytes
+==================================================
+downloaded 2265 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/respir.txt'
+Content type 'text/plain' length 6050 bytes
+==================================================
+downloaded 6050 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/respir-data.txt'
+Content type 'text/plain' length 5108 bytes
+==================================================
+downloaded 5108 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/respir.sas7bdat'
+Content type 'application/octet-stream' length 17408 bytes (17 KB)
+==================================================
+downloaded 17 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/respir.dta'
+Content type 'application/octet-stream' length 4927 bytes
+==================================================
+downloaded 4927 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tumor.txt'
+Content type 'text/plain' length 4582 bytes
+==================================================
+downloaded 4582 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tumor-data.txt'
+Content type 'text/plain' length 3374 bytes
+==================================================
+downloaded 3374 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tumor.sas7bdat'
+Content type 'application/octet-stream' length 5120 bytes
+==================================================
+downloaded 5120 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/tumor.dta'
+Content type 'application/octet-stream' length 1613 bytes
+==================================================
+downloaded 1613 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cd4.txt'
+Content type 'text/plain' length 314430 bytes (307 KB)
+==================================================
+downloaded 307 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cd4-data.txt'
+Content type 'text/plain' length 312231 bytes (304 KB)
+==================================================
+downloaded 304 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cd4.sas7bdat'
+Content type 'application/octet-stream' length 250880 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/cd4.dta'
+Content type 'application/octet-stream' length 122174 bytes (119 KB)
+==================================================
+downloaded 119 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/toenail.txt'
+Content type 'text/plain' length 33563 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/toenail-data.txt'
+Content type 'text/plain' length 31922 bytes (31 KB)
+==================================================
+downloaded 31 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/toenail.sas7bdat'
+Content type 'application/octet-stream' length 82944 bytes (81 KB)
+==================================================
+downloaded 81 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/toenail.dta'
+Content type 'application/octet-stream' length 39271 bytes (38 KB)
+==================================================
+downloaded 38 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/progesterone.txt'
+Content type 'text/plain' length 22925 bytes (22 KB)
+==================================================
+downloaded 22 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/progesterone-data.txt'
+Content type 'text/plain' length 21144 bytes (20 KB)
+==================================================
+downloaded 20 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/progesterone.sas7bdat'
+Content type 'application/octet-stream' length 41984 bytes (41 KB)
+==================================================
+downloaded 41 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/progesterone.dta'
+Content type 'application/octet-stream' length 18992 bytes (18 KB)
+==================================================
+downloaded 18 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/arthritis.txt'
+Content type 'text/plain' length 6441 bytes
+==================================================
+downloaded 6441 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/arthritis-data.txt'
+Content type 'text/plain' length 5043 bytes
+==================================================
+downloaded 5043 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/arthritis.sas7bdat'
+Content type 'application/octet-stream' length 25600 bytes (25 KB)
+==================================================
+downloaded 25 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/arthritis.dta'
+Content type 'application/octet-stream' length 9993 bytes
+==================================================
+downloaded 9993 bytes
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/schizophrenia.txt'
+Content type 'text/plain' length 33771 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/schizophrenia-data.txt'
+Content type 'text/plain' length 32059 bytes (31 KB)
+==================================================
+downloaded 31 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/schizophrenia.sas7bdat'
+Content type 'application/octet-stream' length 58368 bytes (57 KB)
+==================================================
+downloaded 57 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/schizophrenia.dta'
+Content type 'application/octet-stream' length 26560 bytes (25 KB)
+==================================================
+downloaded 25 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/skin.txt'
+Content type 'text/plain' length 532962 bytes (520 KB)
+==================================================
+downloaded 520 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/skin-data.txt'
+Content type 'text/plain' length 531270 bytes (518 KB)
+==================================================
+downloaded 518 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/skin.sas7bdat'
+Content type 'application/octet-stream' length 517120 bytes (505 KB)
+==================================================
+downloaded 505 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/skin.dta'
+Content type 'application/octet-stream' length 256823 bytes (250 KB)
+==================================================
+downloaded 250 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fat.txt'
+Content type 'text/plain' length 57555 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fat-data.txt'
+[1] "fat-data.txt NOT WORKING"
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fat.sas7bdat'
+Content type 'application/octet-stream' length 46080 bytes (45 KB)
+==================================================
+downloaded 45 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/fat.dta'
+Content type 'application/octet-stream' length 22091 bytes (21 KB)
+==================================================
+downloaded 21 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ccs.txt'
+Content type 'text/plain' length 141642 bytes (138 KB)
+==================================================
+downloaded 138 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ccs-data.txt'
+Content type 'text/plain' length 140055 bytes (136 KB)
+==================================================
+downloaded 136 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ccs.sas7bdat'
+Content type 'application/octet-stream' length 107520 bytes (105 KB)
+==================================================
+downloaded 105 KB
+
+provo con l'URL 'http://content.sph.harvard.edu/fitzmaur/ala2e/ccs.dta'
+Content type 'application/octet-stream' length 51131 bytes (49 KB)
+==================================================
+downloaded 49 KB
+
+Warning messages:
+1: In download.file(url = url, destfile = paste0(outdir, "/", fname)) :
+  cannot open URL 'https://content.sph.harvard.edu/fitzmaur/ala2e/tlcmiss-data.txt': HTTP status was '404 Not Found'
+2: In download.file(url = url, destfile = paste0(outdir, "/", fname)) :
+  cannot open URL 'https://content.sph.harvard.edu/fitzmaur/ala2e/fev1-data.txt': HTTP status was '404 Not Found'
+3: In download.file(url = url, destfile = paste0(outdir, "/", fname)) :
+  cannot open URL 'https://content.sph.harvard.edu/fitzmaur/ala2e/obesity.sas7bdat': HTTP status was '404 Not Found'
+4: In download.file(url = url, destfile = paste0(outdir, "/", fname)) :
+  cannot open URL 'https://content.sph.harvard.edu/fitzmaur/ala2e/obesity.dta': HTTP status was '404 Not Found'
+5: In download.file(url = url, destfile = paste0(outdir, "/", fname)) :
+  cannot open URL 'https://content.sph.harvard.edu/fitzmaur/ala2e/fat-data.txt': HTTP status was '404 Not Found'
+> 
