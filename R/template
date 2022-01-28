@@ -6,8 +6,8 @@
 #' \describe{
 #' \item{}{}
 #' }
-#' @source Hosmer, D.W., Lemeshow, S. and Sturdivant, R.X. (2013) Applied
-#' Logistic Regression, 3rd ed., New York: Wiley
+#' @source Fitzmaurice, G., Laird, N. and Ware, J. (2011) Applied
+#' Longitudinal Analysis, 2nd ed., New York: Wiley
 #' @examples
 #' head(newdataset, n = 10)
 #' summary(newdataset)
